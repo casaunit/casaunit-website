@@ -89,7 +89,7 @@ export default async function UnitDetailPage({
             <h2 className="mt-10 font-heading text-xl font-bold">{t("description")}</h2>
             <p className="mt-2 text-ink/65">{description}</p>
 
-            {unit.amenities.length > 0 && (
+            {unit.amenities && unit.amenities.length > 0 && (
               <>
                 <h2 className="mt-8 font-heading text-xl font-bold">{t("amenities")}</h2>
                 <div className="mt-2 flex flex-wrap gap-2">

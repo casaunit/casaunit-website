@@ -1,10 +1,11 @@
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { BedDouble, Bath, Ruler, CalendarDays } from "lucide-react";
 import { Link } from "@/lib/navigation";
-import { Unit } from "@/types/unit";
+import { PublicUnit } from "@/types/unit";
 
 interface PropertyCardProps {
-  unit: Unit;
+  unit: PublicUnit;
 }
 
 const typeLabel: Record<string, { en: string; fr: string }> = {
@@ -13,7 +14,9 @@ const typeLabel: Record<string, { en: string; fr: string }> = {
   "1br_den": { en: "1 Bedroom + Den", fr: "1 chambre + bureau" },
   "2br": { en: "2 Bedrooms", fr: "2 chambres" },
   "2br_den": { en: "2 Bedrooms + Den", fr: "2 chambres + bureau" },
-  "3br": { en: "3 Bedrooms", fr: "3 chambres" }
+  "3br": { en: "3 Bedrooms", fr: "3 chambres" },
+  penthouse: { en: "Penthouse", fr: "Penthouse" },
+  other: { en: "Apartment", fr: "Logement" }
 };
 
 export default function PropertyCard({ unit }: PropertyCardProps) {
@@ -29,10 +32,19 @@ export default function PropertyCard({ unit }: PropertyCardProps) {
       className="card group flex flex-col overflow-hidden"
     >
       <div className="relative aspect-[4/3] bg-forest/10">
-        {/* Real photo goes here once inventory is connected */}
-        <div className="absolute inset-0 flex items-center justify-center text-xs font-medium uppercase tracking-wide text-ink/30">
-          {unit.isPlaceholder ? t("placeholderNotice") : ""}
-        </div>
+        {unit.images.length > 0 ? (
+          <Image
+            src={unit.images[0]}
+            alt={unit.publicLabel}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-xs font-medium uppercase tracking-wide text-ink/30">
+            {unit.isPlaceholder ? t("placeholderNotice") : ""}
+          </div>
+        )}
         {unit.status === "coming_soon" && (
           <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cream">
             {t("comingSoon")}
@@ -44,7 +56,7 @@ export default function PropertyCard({ unit }: PropertyCardProps) {
         <p className="text-xs font-semibold uppercase tracking-wide text-terracotta">
           {label ? (locale === "fr" ? label.fr : label.en) : ""}
         </p>
-        <h3 className="mt-1 font-heading text-lg font-bold text-ink">{unit.buildingName}</h3>
+        <h3 className="mt-1 font-heading text-lg font-bold text-ink">{unit.publicLabel}</h3>
         <p className="text-sm text-ink/55">
           {unit.neighbourhood ? `${unit.neighbourhood}, ` : ""}
           {unit.city}

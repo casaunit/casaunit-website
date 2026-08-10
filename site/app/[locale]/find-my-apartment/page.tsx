@@ -1,6 +1,6 @@
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Locale } from "@/i18n";
+import { Locale } from "@/routing";
 import LeadForm from "@/components/leads/LeadForm";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default async function FindMyApartmentPage({
   params: { locale: Locale };
   searchParams: Record<string, string | undefined>;
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = await getTranslations("LeadForm");
 
   return (

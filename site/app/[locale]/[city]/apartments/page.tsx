@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { cities } from "@/data/seed/cities";
 import { getUnitsByCity, filterUnits } from "@/lib/inventory/getUnits";
 import { parseBudgetRange } from "@/lib/search/parseBudgetRange";
-import { Locale } from "@/i18n";
+import { Locale } from "@/routing";
 import PropertyCard from "@/components/property/PropertyCard";
 import SearchFilters from "@/components/search/SearchFilters";
 
@@ -33,7 +33,7 @@ export default async function CityApartmentsPage({
   params: { locale: Locale; city: string };
   searchParams: Record<string, string | undefined>;
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const cityData = cities.find((c) => c.slug === city && c.isActive);
   if (!cityData) notFound();

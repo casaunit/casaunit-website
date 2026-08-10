@@ -1,4 +1,4 @@
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import Hero from "@/components/home/Hero";
 import CitiesSection from "@/components/home/CitiesSection";
 import FeaturedApartments from "@/components/home/FeaturedApartments";
@@ -7,10 +7,10 @@ import TrustSection from "@/components/home/TrustSection";
 import ResourcesPreview from "@/components/home/ResourcesPreview";
 import FinalCta from "@/components/home/FinalCta";
 import WhatsAppButton from "@/components/marketing/WhatsAppButton";
-import { Locale } from "@/i18n";
+import { Locale } from "@/routing";
 
 export default function HomePage({ params: { locale } }: { params: { locale: Locale } }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return (
     <>

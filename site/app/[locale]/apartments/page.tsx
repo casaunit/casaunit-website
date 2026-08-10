@@ -1,8 +1,8 @@
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { getAllUnits, filterUnits } from "@/lib/inventory/getUnits";
 import { parseBudgetRange } from "@/lib/search/parseBudgetRange";
-import { Locale } from "@/i18n";
+import { Locale } from "@/routing";
 import PropertyCard from "@/components/property/PropertyCard";
 import SearchFilters from "@/components/search/SearchFilters";
 
@@ -18,7 +18,7 @@ export default async function AllApartmentsPage({
   params: { locale: Locale };
   searchParams: Record<string, string | undefined>;
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations("ApartmentsListing");
 

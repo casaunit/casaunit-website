@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { BedDouble, Bath, Ruler, CalendarDays, Car, Sofa, PawPrint } from "lucide-react";
 import { getAllUnits, getUnitBySlug } from "@/lib/inventory/getUnits";
-import { Locale } from "@/i18n";
+import { Locale } from "@/routing";
 import UnitGallery from "@/components/property/UnitGallery";
 import LeadFormModal from "@/components/leads/LeadFormModal";
 import WhatsAppButton from "@/components/marketing/WhatsAppButton";
@@ -31,7 +31,7 @@ export default async function UnitDetailPage({
 }: {
   params: { locale: Locale; unitSlug: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const unit = await getUnitBySlug(unitSlug);
   if (!unit) notFound();

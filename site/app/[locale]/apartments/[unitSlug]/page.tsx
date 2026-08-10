@@ -116,6 +116,21 @@ export default async function UnitDetailPage({
               </>
             )}
 
+            {unit.floorPlanUrl && (
+              <>
+                <h2 className="mt-8 font-heading text-xl font-bold">{t("floorPlan")}</h2>
+                <div className="relative mt-2 aspect-[4/3] w-full max-w-md overflow-hidden rounded-xl border border-border bg-forest/5">
+                  <Image
+                    src={unit.floorPlanUrl}
+                    alt={t("floorPlan")}
+                    fill
+                    sizes="500px"
+                    className="object-contain"
+                  />
+                </div>
+              </>
+            )}
+
             <h2 className="mt-8 font-heading text-xl font-bold">{t("neighbourhoodArea")}</h2>
             <div className="mt-2 aspect-video w-full rounded-xl bg-forest/10" />
             <p className="mt-2 text-xs text-ink/40">{t("mapPlaceholder")}</p>

@@ -23,6 +23,19 @@
     "any": "Any",
     "submit": "Search for a Unit"
   },
+  "StartingPrices": {
+    "title": "A home for every need.",
+    "subtitle": "See our rents starting at:",
+    "from": "Starting at",
+    "perMonth": "/ month",
+    "categories": {
+      "studio": "Studio",
+      "1br": "1 Bedroom",
+      "2br": "2 Bedrooms",
+      "3br": "3 Bedrooms"
+    },
+    "cta": "See available units"
+  },
   "FeaturedUnits": {
     "title": "Available Units",
     "viewAll": "View all units"
@@ -110,6 +123,7 @@
   },
   "UnitDetail": {
     "unit": "Unit",
+    "floorLabel": "Floor",
     "bedrooms": "Bedrooms",
     "bathrooms": "Bathrooms",
     "sqft": "Sq. Ft.",
@@ -119,8 +133,11 @@
     "unfurnished": "Unfurnished",
     "parkingAvailable": "Parking available",
     "noParking": "No parking",
+    "lockerAvailable": "Locker available",
+    "noLocker": "No locker",
     "petsAllowed": "Pets allowed",
     "noPets": "No pets",
+    "commonAreas": "Common Areas",
     "description": "Description",
     "utilities": "Utilities Included",
     "neighbourhoodArea": "Neighbourhood",

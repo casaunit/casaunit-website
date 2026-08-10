@@ -23,6 +23,19 @@
     "any": "Toutes",
     "submit": "Rechercher une unité"
   },
+  "StartingPrices": {
+    "title": "Des logements pour chaque besoin.",
+    "subtitle": "Découvrez nos loyers à partir de :",
+    "from": "À partir de",
+    "perMonth": "/ mois",
+    "categories": {
+      "studio": "Studio",
+      "1br": "1 chambre",
+      "2br": "2 chambres",
+      "3br": "3 chambres"
+    },
+    "cta": "Voir les unités disponibles"
+  },
   "FeaturedUnits": {
     "title": "Unités disponibles",
     "viewAll": "Voir toutes les unités"
@@ -110,6 +123,7 @@
   },
   "UnitDetail": {
     "unit": "Logement",
+    "floorLabel": "Étage",
     "bedrooms": "Chambres",
     "bathrooms": "Salles de bain",
     "sqft": "Pi²",
@@ -119,8 +133,11 @@
     "unfurnished": "Non meublé",
     "parkingAvailable": "Stationnement disponible",
     "noParking": "Pas de stationnement",
+    "lockerAvailable": "Casier disponible",
+    "noLocker": "Pas de casier",
     "petsAllowed": "Animaux acceptés",
     "noPets": "Animaux non acceptés",
+    "commonAreas": "Espaces communs",
     "description": "Description",
     "utilities": "Services inclus",
     "neighbourhoodArea": "Quartier",

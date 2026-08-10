@@ -1,0 +1,212 @@
+{
+  "Nav": {
+    "findHome": "Find a Home",
+    "ottawa": "Ottawa",
+    "gatineau": "Gatineau",
+    "howItWorks": "How It Works",
+    "movingToCanada": "Moving to Canada",
+    "about": "About Us",
+    "contact": "Contact",
+    "cta": "Find My Apartment"
+  },
+  "Hero": {
+    "headline": "Your New Home in Canada Starts Here.",
+    "subheadline": "Browse apartments in Ottawa and Gatineau, tell us what you're looking for, and our team will help you secure your home before you arrive.",
+    "ctaPrimary": "Find My Apartment",
+    "ctaSecondary": "Browse Available Homes"
+  },
+  "Search": {
+    "city": "City",
+    "cityPlaceholder": "Select a city",
+    "budget": "Monthly Budget",
+    "budgetPlaceholder": "Select a range",
+    "bedrooms": "Bedrooms",
+    "bedroomsPlaceholder": "Select apartment type",
+    "moveInDate": "Move-in Date",
+    "moveInPlaceholder": "Select date",
+    "submit": "Search Homes"
+  },
+  "Cities": {
+    "title": "Choose Your City",
+    "subtitle": "We're starting in the National Capital Region, with more Canadian cities on the way.",
+    "ottawa": {
+      "name": "Ottawa",
+      "province": "Ontario",
+      "description": "Canada's capital — a bilingual, career-friendly city with strong job markets in tech, government, and healthcare.",
+      "cta": "View Ottawa Rentals"
+    },
+    "gatineau": {
+      "name": "Gatineau",
+      "province": "Quebec",
+      "description": "Just across the river from Ottawa — French-speaking, more affordable, and closely connected to the capital region.",
+      "cta": "View Gatineau Rentals"
+    },
+    "comingSoon": "Coming Soon"
+  },
+  "Featured": {
+    "title": "Available Apartments",
+    "subtitle": "A sample of units currently available through our partner buildings.",
+    "viewAll": "View All Apartments",
+    "viewUnit": "View Unit",
+    "bedrooms": "Bed",
+    "bathrooms": "Bath",
+    "sqft": "sq. ft.",
+    "availableFrom": "Available",
+    "furnished": "Furnished",
+    "unfurnished": "Unfurnished",
+    "placeholderNotice": "Sample listings shown below — real inventory will appear here once connected."
+  },
+  "HowItWorks": {
+    "title": "How It Works",
+    "subtitle": "Four simple steps between where you are now and your new home in Canada.",
+    "step1": {
+      "title": "Tell Us What You Need",
+      "description": "Choose your city, budget, apartment size and move-in date."
+    },
+    "step2": {
+      "title": "Discover Available Apartments",
+      "description": "Browse available homes from our partner properties."
+    },
+    "step3": {
+      "title": "Speak With an Advisor",
+      "description": "Our team helps you compare options and guides you through the rental process."
+    },
+    "step4": {
+      "title": "Secure Your New Home",
+      "description": "Complete the required rental application and prepare for your move to Canada."
+    },
+    "disclaimer": "Rental applications remain subject to the applicable property owner or manager's approval criteria."
+  },
+  "Trust": {
+    "title": "Moving countries is stressful. Finding your home shouldn't be.",
+    "verified": {
+      "title": "Verified Rental Properties",
+      "description": "We work directly with rental buildings, property managers, and developers."
+    },
+    "advisors": {
+      "title": "Real Housing Advisors",
+      "description": "A person — not a bot — helps you compare options and answers your questions."
+    },
+    "pricing": {
+      "title": "Transparent Pricing",
+      "description": "No hidden fees. What you see is what you're working with."
+    },
+    "local": {
+      "title": "Local Knowledge",
+      "description": "We know the neighbourhoods, the commutes, and what matters when you're moving from abroad."
+    },
+    "beforeArrival": {
+      "title": "Support Before You Arrive",
+      "description": "Start the process from anywhere in the world, before you land in Canada."
+    },
+    "languages": {
+      "title": "Support in Multiple Languages",
+      "description": "We communicate in the language you're most comfortable with."
+    }
+  },
+  "Resources": {
+    "title": "Get Ready for Canada",
+    "subtitle": "Guides to help you plan your move, before you even land.",
+    "viewAll": "View All Resources"
+  },
+  "WhatsApp": {
+    "floatingLabel": "Chat With an Advisor",
+    "bannerTitle": "Need Help Finding a Home?",
+    "bannerSubtitle": "Message us on WhatsApp — our team usually replies quickly.",
+    "bannerCta": "Ask Us on WhatsApp",
+    "defaultMessage": "Hello, I'm looking for an apartment in Canada. I found your website and would like more information."
+  },
+  "Footer": {
+    "tagline": "Find your home in Canada before you arrive.",
+    "cities": "Cities",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "cookies": "Cookie Policy",
+    "rights": "All rights reserved."
+  },
+  "CityPage": {
+    "viewApartments": "View {city} Rentals",
+    "availableIn": "Available in {city}",
+    "seeAll": "See All",
+    "noUnits": "No units published yet — check back soon, or message us on WhatsApp and we'll send you options directly.",
+    "whatsappMessage": "Hello, I'm looking for an apartment in {city}. I found your website and would like more information.",
+    "descriptions": {
+      "ottawa": "Canada's capital — a bilingual, career-friendly city with strong job markets in tech, government, and healthcare.",
+      "gatineau": "Just across the river from Ottawa — French-speaking, more affordable, and closely connected to the capital region."
+    }
+  },
+  "ApartmentsListing": {
+    "titleForCity": "Apartments in {city}",
+    "titleAll": "All Available Apartments",
+    "resultsCount": "{count} apartments available",
+    "filters": "Filters",
+    "priceMin": "Min Price",
+    "priceMax": "Max Price",
+    "bedrooms": "Bedrooms",
+    "any": "Any",
+    "furnished": "Furnished",
+    "furnishedYes": "Furnished",
+    "furnishedNo": "Unfurnished",
+    "parkingRequired": "Parking required",
+    "petFriendly": "Pet-friendly",
+    "clearFilters": "Clear filters",
+    "noResults": "No apartments match these filters right now — try widening your search, or message us on WhatsApp and we'll help you find options."
+  },
+  "UnitDetail": {
+    "unit": "Unit",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "sqft": "Sq. Ft.",
+    "availableFrom": "Available",
+    "tbd": "TBD",
+    "furnished": "Furnished",
+    "unfurnished": "Unfurnished",
+    "parkingAvailable": "Parking available",
+    "noParking": "No parking",
+    "petsAllowed": "Pets allowed",
+    "noPets": "No pets",
+    "description": "Description",
+    "utilities": "Utilities Included",
+    "neighbourhoodArea": "Neighbourhood",
+    "mapPlaceholder": "Map integration coming soon.",
+    "month": "month",
+    "subjectToApproval": "Subject to the property owner's approval criteria.",
+    "interestedCta": "I'm Interested in This Unit",
+    "whatsappMessage": "Hello, I'm interested in {unit}. I found it on your website and would like more information."
+  },
+  "LeadForm": {
+    "title": "Get My Apartment Options",
+    "pageTitle": "Find My Apartment",
+    "pageSubtitle": "Tell us what you're looking for and a housing advisor will contact you with matching options.",
+    "attachedUnit": "Unit",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "whatsapp": "WhatsApp / Phone Number",
+    "email": "Email Address",
+    "currentCountry": "Current Country",
+    "preferredCity": "Preferred City",
+    "preferredNeighbourhood": "Preferred Neighbourhood (if applicable)",
+    "budget": "Monthly Budget",
+    "bedrooms": "Number of Bedrooms",
+    "moveInDate": "Move-in Date",
+    "arrivalDate": "When are you planning to arrive in Canada?",
+    "occupants": "Number of Occupants",
+    "furnishedPreference": "Furnished or Unfurnished?",
+    "noPreference": "No preference",
+    "furnished": "Furnished",
+    "unfurnished": "Unfurnished",
+    "needsParking": "I need parking",
+    "hasPets": "I have pets",
+    "immigrationStatus": "Immigration status (optional)",
+    "immigrationStatusHint": "Employment, study permit, work permit, PR, or other — entirely optional.",
+    "additionalComments": "Additional Comments",
+    "select": "Select",
+    "consent": "I agree to be contacted by a housing advisor via WhatsApp, phone, or email about my request.",
+    "submit": "Get My Apartment Options",
+    "successTitle": "Thank you.",
+    "successMessage": "We've received your request. A housing advisor will contact you shortly with available options matching your criteria.",
+    "errorMessage": "Something went wrong submitting the form. Please try again or message us on WhatsApp."
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "Nav": {
+    "findHome": "Trouver un logement",
+    "ottawa": "Ottawa",
+    "gatineau": "Gatineau",
+    "howItWorks": "Comment ça marche",
+    "movingToCanada": "Déménager au Canada",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Trouver mon appartement"
+  },
+  "Hero": {
+    "headline": "Votre nouvelle maison au Canada commence ici.",
+    "subheadline": "Parcourez les appartements à Ottawa et Gatineau, dites-nous ce que vous recherchez, et notre équipe vous aide à sécuriser votre logement avant votre arrivée.",
+    "ctaPrimary": "Trouver mon appartement",
+    "ctaSecondary": "Voir les logements disponibles"
+  },
+  "Search": {
+    "city": "Ville",
+    "cityPlaceholder": "Choisir une ville",
+    "budget": "Budget mensuel",
+    "budgetPlaceholder": "Choisir une fourchette",
+    "bedrooms": "Chambres",
+    "bedroomsPlaceholder": "Choisir un type de logement",
+    "moveInDate": "Date d'emménagement",
+    "moveInPlaceholder": "Choisir une date",
+    "submit": "Rechercher"
+  },
+  "Cities": {
+    "title": "Choisissez votre ville",
+    "subtitle": "Nous démarrons dans la région de la capitale nationale, avec d'autres villes canadiennes à venir.",
+    "ottawa": {
+      "name": "Ottawa",
+      "province": "Ontario",
+      "description": "La capitale du Canada — une ville bilingue avec un marché de l'emploi solide en technologie, gouvernement et santé.",
+      "cta": "Voir les logements à Ottawa"
+    },
+    "gatineau": {
+      "name": "Gatineau",
+      "province": "Québec",
+      "description": "Juste de l'autre côté de la rivière face à Ottawa — francophone, plus abordable, et étroitement liée à la région de la capitale.",
+      "cta": "Voir les logements à Gatineau"
+    },
+    "comingSoon": "Bientôt disponible"
+  },
+  "Featured": {
+    "title": "Appartements disponibles",
+    "subtitle": "Un aperçu des logements actuellement disponibles auprès de nos immeubles partenaires.",
+    "viewAll": "Voir tous les appartements",
+    "viewUnit": "Voir le logement",
+    "bedrooms": "Ch.",
+    "bathrooms": "SdB",
+    "sqft": "pi²",
+    "availableFrom": "Disponible",
+    "furnished": "Meublé",
+    "unfurnished": "Non meublé",
+    "placeholderNotice": "Exemples de logements affichés ci-dessous — l'inventaire réel apparaîtra ici une fois connecté."
+  },
+  "HowItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Quatre étapes simples entre où vous êtes maintenant et votre nouveau chez-vous au Canada.",
+    "step1": {
+      "title": "Dites-nous ce dont vous avez besoin",
+      "description": "Choisissez votre ville, votre budget, la taille du logement et la date d'emménagement."
+    },
+    "step2": {
+      "title": "Découvrez les appartements disponibles",
+      "description": "Parcourez les logements disponibles de nos propriétés partenaires."
+    },
+    "step3": {
+      "title": "Parlez à un conseiller",
+      "description": "Notre équipe vous aide à comparer les options et vous guide dans le processus de location."
+    },
+    "step4": {
+      "title": "Sécurisez votre nouveau logement",
+      "description": "Complétez la demande de location requise et préparez votre déménagement au Canada."
+    },
+    "disclaimer": "Les demandes de location demeurent sujettes aux critères d'approbation du propriétaire ou du gestionnaire concerné."
+  },
+  "Trust": {
+    "title": "Déménager dans un autre pays est stressant. Trouver votre logement ne devrait pas l'être.",
+    "verified": {
+      "title": "Propriétés locatives vérifiées",
+      "description": "Nous travaillons directement avec des immeubles locatifs, gestionnaires et promoteurs."
+    },
+    "advisors": {
+      "title": "De vrais conseillers en logement",
+      "description": "Une vraie personne — pas un robot — vous aide à comparer les options et répond à vos questions."
+    },
+    "pricing": {
+      "title": "Prix transparents",
+      "description": "Aucuns frais cachés. Ce que vous voyez est ce avec quoi vous travaillez."
+    },
+    "local": {
+      "title": "Connaissance locale",
+      "description": "Nous connaissons les quartiers, les trajets, et ce qui compte quand on déménage de l'étranger."
+    },
+    "beforeArrival": {
+      "title": "Soutien avant votre arrivée",
+      "description": "Commencez le processus de n'importe où dans le monde, avant même d'atterrir au Canada."
+    },
+    "languages": {
+      "title": "Soutien en plusieurs langues",
+      "description": "Nous communiquons dans la langue avec laquelle vous êtes le plus à l'aise."
+    }
+  },
+  "Resources": {
+    "title": "Préparez votre arrivée au Canada",
+    "subtitle": "Des guides pour planifier votre déménagement, avant même d'atterrir.",
+    "viewAll": "Voir toutes les ressources"
+  },
+  "WhatsApp": {
+    "floatingLabel": "Discuter avec un conseiller",
+    "bannerTitle": "Besoin d'aide pour trouver un logement ?",
+    "bannerSubtitle": "Écrivez-nous sur WhatsApp — notre équipe répond généralement rapidement.",
+    "bannerCta": "Nous écrire sur WhatsApp",
+    "defaultMessage": "Bonjour, je cherche un appartement au Canada. J'ai trouvé votre site web et j'aimerais plus d'informations."
+  },
+  "Footer": {
+    "tagline": "Trouvez votre logement au Canada avant votre arrivée.",
+    "cities": "Villes",
+    "company": "Entreprise",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique de cookies",
+    "rights": "Tous droits réservés."
+  },
+  "CityPage": {
+    "viewApartments": "Voir les logements à {city}",
+    "availableIn": "Disponible à {city}",
+    "seeAll": "Voir tout",
+    "noUnits": "Aucun logement publié pour le moment — revenez bientôt, ou écrivez-nous sur WhatsApp et nous vous enverrons des options directement.",
+    "whatsappMessage": "Bonjour, je cherche un appartement à {city}. J'ai trouvé votre site web et j'aimerais plus d'informations.",
+    "descriptions": {
+      "ottawa": "La capitale du Canada — une ville bilingue avec un marché de l'emploi solide en technologie, gouvernement et santé.",
+      "gatineau": "Juste de l'autre côté de la rivière face à Ottawa — francophone, plus abordable, et étroitement liée à la région de la capitale."
+    }
+  },
+  "ApartmentsListing": {
+    "titleForCity": "Appartements à {city}",
+    "titleAll": "Tous les appartements disponibles",
+    "resultsCount": "{count} appartements disponibles",
+    "filters": "Filtres",
+    "priceMin": "Prix min.",
+    "priceMax": "Prix max.",
+    "bedrooms": "Chambres",
+    "any": "Tous",
+    "furnished": "Meublé",
+    "furnishedYes": "Meublé",
+    "furnishedNo": "Non meublé",
+    "parkingRequired": "Stationnement requis",
+    "petFriendly": "Animaux acceptés",
+    "clearFilters": "Effacer les filtres",
+    "noResults": "Aucun appartement ne correspond à ces filtres pour le moment — élargissez votre recherche, ou écrivez-nous sur WhatsApp et nous vous aiderons à trouver des options."
+  },
+  "UnitDetail": {
+    "unit": "Logement",
+    "bedrooms": "Chambres",
+    "bathrooms": "Salles de bain",
+    "sqft": "Pi²",
+    "availableFrom": "Disponible",
+    "tbd": "À déterminer",
+    "furnished": "Meublé",
+    "unfurnished": "Non meublé",
+    "parkingAvailable": "Stationnement disponible",
+    "noParking": "Pas de stationnement",
+    "petsAllowed": "Animaux acceptés",
+    "noPets": "Animaux non acceptés",
+    "description": "Description",
+    "utilities": "Services inclus",
+    "neighbourhoodArea": "Quartier",
+    "mapPlaceholder": "Intégration de carte à venir.",
+    "month": "mois",
+    "subjectToApproval": "Sous réserve des critères d'approbation du propriétaire.",
+    "interestedCta": "Je suis intéressé(e) par ce logement",
+    "whatsappMessage": "Bonjour, je suis intéressé(e) par {unit}. Je l'ai trouvé sur votre site web et j'aimerais plus d'informations."
+  },
+  "LeadForm": {
+    "title": "Obtenir mes options de logement",
+    "pageTitle": "Trouver mon appartement",
+    "pageSubtitle": "Dites-nous ce que vous recherchez et un conseiller en logement vous contactera avec des options correspondantes.",
+    "attachedUnit": "Logement",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "whatsapp": "WhatsApp / Numéro de téléphone",
+    "email": "Adresse courriel",
+    "currentCountry": "Pays actuel",
+    "preferredCity": "Ville souhaitée",
+    "preferredNeighbourhood": "Quartier souhaité (si applicable)",
+    "budget": "Budget mensuel",
+    "bedrooms": "Nombre de chambres",
+    "moveInDate": "Date d'emménagement",
+    "arrivalDate": "Quand prévoyez-vous d'arriver au Canada ?",
+    "occupants": "Nombre d'occupants",
+    "furnishedPreference": "Meublé ou non meublé ?",
+    "noPreference": "Aucune préférence",
+    "furnished": "Meublé",
+    "unfurnished": "Non meublé",
+    "needsParking": "J'ai besoin d'un stationnement",
+    "hasPets": "J'ai des animaux",
+    "immigrationStatus": "Statut d'immigration (optionnel)",
+    "immigrationStatusHint": "Emploi, permis d'études, permis de travail, RP, ou autre — entièrement optionnel.",
+    "additionalComments": "Commentaires additionnels",
+    "select": "Choisir",
+    "consent": "J'accepte d'être contacté(e) par un conseiller en logement par WhatsApp, téléphone ou courriel au sujet de ma demande.",
+    "submit": "Obtenir mes options de logement",
+    "successTitle": "Merci.",
+    "successMessage": "Nous avons bien reçu votre demande. Un conseiller en logement vous contactera sous peu avec des options disponibles correspondant à vos critères.",
+    "errorMessage": "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer ou nous écrire sur WhatsApp."
+  }
+}

@@ -1,4 +1,5 @@
 import { LeadPayload } from "@/types/lead";
+import { LandlordLeadPayload } from "@/types/landlordLead";
 
 /**
  * Persistence for submitted leads. A lead is written here BEFORE it's
@@ -11,7 +12,7 @@ import { LeadPayload } from "@/types/lead";
  * Prisma (or another store) is connected — nothing else in the lead
  * flow needs to change.
  */
-export async function persistLead(payload: LeadPayload) {
+export async function persistLead(payload: LeadPayload | LandlordLeadPayload) {
   // eslint-disable-next-line no-console
   console.log("[lead:received]", JSON.stringify(payload));
   return { id: `local_${Date.now()}` };

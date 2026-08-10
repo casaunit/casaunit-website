@@ -1,52 +1,57 @@
 {
   "Nav": {
-    "findHome": "Find a Home",
-    "ottawa": "Ottawa",
-    "gatineau": "Gatineau",
-    "howItWorks": "How It Works",
-    "movingToCanada": "Moving to Canada",
-    "about": "About Us",
-    "contact": "Contact",
-    "cta": "Find My Apartment"
+    "home": "Home",
+    "cta": "Find a Home",
+    "guide": "Settling-in Guide",
+    "landlords": "For Landlords"
   },
   "Hero": {
-    "headline": "Your New Home in Canada Starts Here.",
-    "subheadline": "Browse apartments in Ottawa and Gatineau, tell us what you're looking for, and our team will help you secure your home before you arrive.",
-    "ctaPrimary": "Find My Apartment",
-    "ctaSecondary": "Browse Available Homes"
+    "eyebrow": "Ottawa · Gatineau",
+    "headline": "Your new life in Canada starts here.",
+    "subheadline": "Find your home in Ottawa and Gatineau, before or after you arrive.",
+    "ctaPrimary": "Find a Home"
   },
-  "Search": {
-    "city": "City",
-    "cityPlaceholder": "Select a city",
-    "budget": "Monthly Budget",
-    "budgetPlaceholder": "Select a range",
-    "bedrooms": "Bedrooms",
-    "bedroomsPlaceholder": "Select apartment type",
-    "moveInDate": "Move-in Date",
-    "moveInPlaceholder": "Select date",
-    "submit": "Search Homes"
+  "Story": {
+    "step1": {
+      "title": "Find your home",
+      "description": "Browse available apartments based on your city, budget, and needs."
+    },
+    "step2": {
+      "title": "Prepare your arrival",
+      "description": "Use our settling-in guide to understand the first things you need to do in Canada."
+    },
+    "step3": {
+      "title": "Settle in with ease",
+      "description": "Housing, transport, banking, phone, internet — the essentials for your first weeks."
+    }
   },
   "Cities": {
-    "title": "Choose Your City",
-    "subtitle": "We're starting in the National Capital Region, with more Canadian cities on the way.",
+    "eyebrow": "Where we are",
+    "title": "Choose your city",
     "ottawa": {
-      "name": "Ottawa",
       "province": "Ontario",
-      "description": "Canada's capital — a bilingual, career-friendly city with strong job markets in tech, government, and healthcare.",
+      "name": "Ottawa",
       "cta": "View Ottawa Rentals"
     },
     "gatineau": {
-      "name": "Gatineau",
       "province": "Quebec",
-      "description": "Just across the river from Ottawa — French-speaking, more affordable, and closely connected to the capital region.",
+      "name": "Gatineau",
       "cta": "View Gatineau Rentals"
-    },
-    "comingSoon": "Coming Soon"
+    }
+  },
+  "GuideTeaser": {
+    "eyebrow": "Settling-in Guide",
+    "title": "A simple guide for your first weeks",
+    "description": "Arrival, housing, money, phone, getting around — the essentials explained simply, drawn from reliable Canadian sources.",
+    "cta": "Read the guide"
+  },
+  "LandlordBanner": {
+    "eyebrow": "Landlords & property managers",
+    "title": "Have units to rent?",
+    "description": "CasaUnit puts your listings in front of serious renters preparing to move to Ottawa and Gatineau.",
+    "cta": "For Landlords"
   },
   "Featured": {
-    "title": "Available Apartments",
-    "subtitle": "A sample of units currently available through our partner buildings.",
-    "viewAll": "View All Apartments",
     "viewUnit": "View Unit",
     "bedrooms": "Bed",
     "bathrooms": "Bath",
@@ -54,60 +59,8 @@
     "availableFrom": "Available",
     "furnished": "Furnished",
     "unfurnished": "Unfurnished",
-    "placeholderNotice": "Sample listings shown below — real inventory will appear here once connected."
-  },
-  "HowItWorks": {
-    "title": "How It Works",
-    "subtitle": "Four simple steps between where you are now and your new home in Canada.",
-    "step1": {
-      "title": "Tell Us What You Need",
-      "description": "Choose your city, budget, apartment size and move-in date."
-    },
-    "step2": {
-      "title": "Discover Available Apartments",
-      "description": "Browse available homes from our partner properties."
-    },
-    "step3": {
-      "title": "Speak With an Advisor",
-      "description": "Our team helps you compare options and guides you through the rental process."
-    },
-    "step4": {
-      "title": "Secure Your New Home",
-      "description": "Complete the required rental application and prepare for your move to Canada."
-    },
-    "disclaimer": "Rental applications remain subject to the applicable property owner or manager's approval criteria."
-  },
-  "Trust": {
-    "title": "Moving countries is stressful. Finding your home shouldn't be.",
-    "verified": {
-      "title": "Verified Rental Properties",
-      "description": "We work directly with rental buildings, property managers, and developers."
-    },
-    "advisors": {
-      "title": "Real Housing Advisors",
-      "description": "A person — not a bot — helps you compare options and answers your questions."
-    },
-    "pricing": {
-      "title": "Transparent Pricing",
-      "description": "No hidden fees. What you see is what you're working with."
-    },
-    "local": {
-      "title": "Local Knowledge",
-      "description": "We know the neighbourhoods, the commutes, and what matters when you're moving from abroad."
-    },
-    "beforeArrival": {
-      "title": "Support Before You Arrive",
-      "description": "Start the process from anywhere in the world, before you land in Canada."
-    },
-    "languages": {
-      "title": "Support in Multiple Languages",
-      "description": "We communicate in the language you're most comfortable with."
-    }
-  },
-  "Resources": {
-    "title": "Get Ready for Canada",
-    "subtitle": "Guides to help you plan your move, before you even land.",
-    "viewAll": "View All Resources"
+    "placeholderNotice": "Sample listing — real inventory will appear here once connected.",
+    "comingSoon": "Coming Soon"
   },
   "WhatsApp": {
     "floatingLabel": "Chat With an Advisor",
@@ -118,12 +71,8 @@
   },
   "Footer": {
     "tagline": "Find your home in Canada before you arrive.",
+    "navigation": "Navigation",
     "cities": "Cities",
-    "company": "Company",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Use",
-    "cookies": "Cookie Policy",
     "rights": "All rights reserved."
   },
   "CityPage": {
@@ -138,13 +87,16 @@
     }
   },
   "ApartmentsListing": {
+    "eyebrow": "The CasaUnit marketplace",
     "titleForCity": "Apartments in {city}",
-    "titleAll": "All Available Apartments",
+    "titleAll": "Find a Home",
     "resultsCount": "{count} apartments available",
     "filters": "Filters",
+    "city": "City",
     "priceMin": "Min Price",
     "priceMax": "Max Price",
     "bedrooms": "Bedrooms",
+    "moveInDate": "Move-in Date",
     "any": "Any",
     "furnished": "Furnished",
     "furnishedYes": "Furnished",
@@ -208,5 +160,138 @@
     "successTitle": "Thank you.",
     "successMessage": "We've received your request. A housing advisor will contact you shortly with available options matching your criteria.",
     "errorMessage": "Something went wrong submitting the form. Please try again or message us on WhatsApp."
+  },
+  "Landlords": {
+    "eyebrow": "Landlords & property managers",
+    "title": "Get your units rented faster.",
+    "subtitle": "CasaUnit connects your available units with serious renters planning their move to Ottawa and Gatineau — often before they've even landed in Canada.",
+    "benefitsEyebrow": "Why CasaUnit",
+    "benefitsTitle": "A simple showcase for your units",
+    "benefits": {
+      "renters": {
+        "title": "Renters ready to move",
+        "description": "Our visitors are actively searching for a home with a real move-in date in mind — not casual browsers."
+      },
+      "speed": {
+        "title": "Fast to get listed",
+        "description": "Send us your unit details and we handle the rest — no platform to learn."
+      },
+      "quality": {
+        "title": "A polished presentation",
+        "description": "Your units are shown with the same visual quality as the rest of the site — not a plain classified ad."
+      },
+      "control": {
+        "title": "You stay in control",
+        "description": "Pricing, availability, and rental criteria remain entirely in your hands."
+      }
+    },
+    "formEyebrow": "Next step",
+    "formTitle": "Tell us about your property",
+    "formSubtitle": "Fill out this short form — a member of our team will reach out to discuss your available units.",
+    "cta": "For Landlords"
+  },
+  "LandlordForm": {
+    "contactName": "Full Name",
+    "companyOrOwnerName": "Company or Owner Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "propertyCity": "Property City",
+    "otherCity": "Other",
+    "unitsCount": "Number of Available Units",
+    "propertyAddress": "Property Address (optional)",
+    "message": "Tell us about your units",
+    "select": "Select",
+    "consent": "I agree to be contacted by the CasaUnit team about my available units.",
+    "submit": "Send My Request",
+    "successTitle": "Thank you.",
+    "successMessage": "We've received your property details. A member of our team will reach out shortly.",
+    "errorMessage": "Something went wrong submitting the form. Please try again."
+  },
+  "Guide": {
+    "eyebrow": "Settling-in Guide",
+    "title": "Your guide to settling in Canada",
+    "subtitle": "A simple, visual overview of what to know for your first weeks in Ottawa and Gatineau — summarized from official Canadian sources.",
+    "sourceLabel": "Official source",
+    "disclaimer": "This guide is for general information only and summarizes public Canadian sources — it does not replace official information from IRCC, Service Canada, or your municipality, which may change.",
+    "sections": {
+      "arrival": {
+        "title": "Your arrival in Canada",
+        "items": {
+          "transport": {
+            "title": "Transport from the airport",
+            "body": "From Ottawa's airport (YOW), the 97 express bus reaches downtown in about 30 minutes for $3.65. The O-Train light rail (Line 4) also connects the airport directly to downtown in 35-45 minutes."
+          },
+          "steps": {
+            "title": "First steps",
+            "body": "As soon as you arrive: apply for your Social Insurance Number (SIN), register for provincial health insurance, and open a bank account. You can start working before your physical SIN arrives, as long as you've applied for one."
+          }
+        }
+      },
+      "housing": {
+        "title": "Your housing",
+        "items": {
+          "findUnit": {
+            "title": "Find a home",
+            "body": "Use our \"Find a Home\" page to filter available apartments by city, budget, bedrooms, and move-in date."
+          },
+          "insurance": {
+            "title": "Tenant insurance",
+            "body": "Tenant insurance isn't legally required, but most landlords require it as a lease condition. Expect about $15-30 per month — it covers your personal belongings and liability."
+          },
+          "utilities": {
+            "title": "Internet / electricity",
+            "body": "In Ottawa (Ontario), electricity is provided by Hydro Ottawa — set it up about 10 business days before you move in. In Gatineau (Quebec), Hydro-Québec serves your home."
+          }
+        }
+      },
+      "money": {
+        "title": "Your money",
+        "items": {
+          "bankAccount": {
+            "title": "Open a bank account",
+            "body": "Canada's five major banks (RBC, TD, Scotiabank, BMO, CIBC) all offer newcomer packages: monthly fees are often waived for several months and no Canadian credit history is required."
+          },
+          "payments": {
+            "title": "Understanding payments",
+            "body": "Card payments (Interac debit or credit) are used almost everywhere in Canada. Interac e-Transfer lets you send money instantly between Canadian bank accounts — handy for rent or splitting bills with roommates."
+          }
+        }
+      },
+      "phone": {
+        "title": "Your phone",
+        "items": {
+          "number": {
+            "title": "Getting a Canadian number",
+            "body": "You can activate an eSIM before you even arrive to have a Canadian number the moment you land, or pick up a physical SIM card once you're here."
+          },
+          "simPlan": {
+            "title": "Choosing a SIM card / plan",
+            "body": "Major carriers (Rogers, Bell, Telus) and their flanker brands (Fido, Koodo, Virgin Plus) offer newcomer plans with no Canadian credit check. Budget brands (Public Mobile, Lucky Mobile) work well on a tighter budget."
+          }
+        }
+      },
+      "transit": {
+        "title": "Getting around",
+        "items": {
+          "transit": {
+            "title": "Public transit",
+            "body": "A monthly OC Transpo pass (Ottawa) is also valid on the STO network (Gatineau) — you can cross the river without paying extra."
+          },
+          "ottawaGatineau": {
+            "title": "Ottawa / Gatineau",
+            "body": "The two cities are connected by several bridges and an integrated bus network, making daily commutes between the two sides straightforward — even if you work on one side and live on the other."
+          }
+        }
+      },
+      "firstWeeks": {
+        "title": "Your first weeks",
+        "items": {
+          "checklist": {
+            "title": "Simple checklist",
+            "body": "SIN, health card, bank account, phone plan, transit pass, monthly budget — then take time to connect with your new community: community centres, cultural associations, and settlement organizations like the YMCA-YWCA in Ottawa."
+          }
+        }
+      }
+    }
   }
 }

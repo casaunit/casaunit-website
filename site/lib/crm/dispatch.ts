@@ -1,4 +1,5 @@
 import { LeadPayload } from "@/types/lead";
+import { LandlordLeadPayload } from "@/types/landlordLead";
 import { CRMAdapter } from "./types";
 import { genericWebhookAdapter } from "./genericWebhook";
 
@@ -8,7 +9,7 @@ const adapters: Record<string, CRMAdapter> = {
   genericWebhook: genericWebhookAdapter
 };
 
-export async function dispatchLead(payload: LeadPayload) {
+export async function dispatchLead(payload: LeadPayload | LandlordLeadPayload) {
   const provider = process.env.CRM_PROVIDER || "genericWebhook";
   const adapter = adapters[provider];
 

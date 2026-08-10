@@ -21,7 +21,7 @@ export default async function FindMyApartmentPage({
 
   return (
     <div className="bg-cream-soft py-14 sm:py-20">
-      <div className="container-content max-w-2xl">
+      <div className="container-wide max-w-2xl">
         <h1 className="text-3xl font-extrabold sm:text-4xl">{t("pageTitle")}</h1>
         <p className="mt-3 text-ink/60">{t("pageSubtitle")}</p>
 

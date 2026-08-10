@@ -1,4 +1,5 @@
 import { LeadPayload } from "@/types/lead";
+import { LandlordLeadPayload } from "@/types/landlordLead";
 
 export interface CRMResult {
   success: boolean;
@@ -7,5 +8,5 @@ export interface CRMResult {
 
 export interface CRMAdapter {
   name: string;
-  sendLead(payload: LeadPayload): Promise<CRMResult>;
+  sendLead(payload: LeadPayload | LandlordLeadPayload): Promise<CRMResult>;
 }

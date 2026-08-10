@@ -13,13 +13,13 @@ export default function UnitGallery({ images, alt }: UnitGalleryProps) {
 
   if (images.length === 0) {
     return (
-      <div className="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-forest/10 to-terracotta/10" />
+      <div className="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-ink/5 to-ink/10" />
     );
   }
 
   return (
     <div>
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-forest/10">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-forest/10">
         <Image src={images[active]} alt={alt} fill className="object-cover" />
       </div>
       {images.length > 1 && (

@@ -1,4 +1,5 @@
 import { LeadPayload } from "@/types/lead";
+import { LandlordLeadPayload } from "@/types/landlordLead";
 import { CRMAdapter, CRMResult } from "./types";
 
 /**
@@ -13,7 +14,7 @@ import { CRMAdapter, CRMResult } from "./types";
  */
 export const genericWebhookAdapter: CRMAdapter = {
   name: "genericWebhook",
-  async sendLead(payload: LeadPayload): Promise<CRMResult> {
+  async sendLead(payload: LeadPayload | LandlordLeadPayload): Promise<CRMResult> {
     const url = process.env.CRM_WEBHOOK_URL;
 
     if (!url) {

@@ -27,9 +27,11 @@ export interface Unit {
   parking: boolean;
   petsAllowed: boolean;
   utilitiesIncluded: string[];
+  amenities?: string[]; // e.g. "Gym", "In-unit laundry", "Balcony" — free-text tags set in Airtable
   descriptionEn: string;
   descriptionFr: string;
   images: string[];
+  floorPlanUrl?: string;
   status: UnitStatus;
   isPlaceholder?: boolean; // true = sample data, not real inventory
 }

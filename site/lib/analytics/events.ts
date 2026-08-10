@@ -12,6 +12,7 @@ type EventName =
   | "apartment_viewed"
   | "lead_form_started"
   | "lead_submitted"
+  | "landlord_lead_submitted"
   | "whatsapp_clicked"
   | "phone_clicked"
   | "apartment_inquiry";

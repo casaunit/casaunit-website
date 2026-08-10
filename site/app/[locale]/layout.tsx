@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,9 +10,13 @@ import WhatsAppButton from "@/components/marketing/WhatsAppButton";
 import AttributionCapture from "@/components/marketing/AttributionCapture";
 import "../globals.css";
 
-const headingFont = Plus_Jakarta_Sans({
+// Fraunces — an elegant, warm editorial serif for headings, paired with
+// Inter for body copy. This is the "premium real estate" type pairing
+// (serif display + clean sans) referenced from the Talisman visual brief.
+const headingFont = Fraunces({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   variable: "--font-heading"
 });
 
@@ -23,9 +27,9 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CasaUnit — Your New Home in Canada Starts Here",
+  title: "CasaUnit — Votre nouvelle vie au Canada commence ici",
   description:
-    "Browse apartments in Ottawa and Gatineau, tell us what you're looking for, and our team will help you secure your home before you arrive."
+    "Trouvez votre logement à Ottawa et Gatineau avant même votre arrivée au Canada. Recherchez par ville, budget et besoins — notre équipe vous accompagne à chaque étape."
 };
 
 export function generateStaticParams() {

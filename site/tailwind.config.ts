@@ -5,31 +5,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // v2 palette — Talisman-inspired premium real estate: white,
+        // off-white, deep navy, with a small amount of lighter blue used
+        // sparingly for tints/accents. Old token *names* (cream/ink/forest/
+        // terracotta) are kept so every component that already references
+        // them repaints automatically — only the hex values changed.
         cream: {
-          DEFAULT: "#FAF7F2",
-          soft: "#F3EEE5"
+          DEFAULT: "#FFFFFF", // white
+          soft: "#F5F5F1" // off-white / very light grey
         },
         ink: {
-          DEFAULT: "#1B2430", // deep navy-charcoal, primary text + trust color
-          soft: "#3A4453"
+          DEFAULT: "#101B33", // deep navy — primary text + dark sections
+          soft: "#48546B" // softened navy-grey for secondary text
         },
         forest: {
-          DEFAULT: "#1F3A34", // secondary trust color, used sparingly (badges, icons)
-          light: "#2E5249"
+          DEFAULT: "#3D5A80", // lighter blue accent, used sparingly (tints, icons)
+          light: "#6E8CB4"
         },
         terracotta: {
-          DEFAULT: "#C4623F", // single accent, CTAs only
-          dark: "#A84F31"
+          DEFAULT: "#101B33", // CTAs are navy, not an accent color, in v2
+          dark: "#0A1424"
         },
-        border: "#E6E0D4"
+        border: "#E4E3DD"
       },
       fontFamily: {
         heading: ["var(--font-heading)"],
         body: ["var(--font-body)"]
       },
       borderRadius: {
-        xl: "1rem",
-        "2xl": "1.5rem"
+        xl: "0.375rem",
+        "2xl": "0.5rem"
       },
       boxShadow: {
         card: "0 4px 24px -6px rgba(27, 36, 48, 0.10)",

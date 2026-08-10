@@ -1,37 +1,36 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/navigation";
-import SearchWidget from "@/components/search/SearchWidget";
+import { stockPhotos } from "@/lib/media/stockPhotos";
 
 export default function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section className="relative overflow-hidden bg-cream-soft">
-      <div className="container-content grid gap-10 py-14 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-28">
-        <div>
-          <h1 className="text-4xl font-extrabold leading-[1.08] text-ink sm:text-5xl lg:text-[3.4rem]">
-            {t("headline")}
-          </h1>
-          <p className="mt-5 max-w-xl text-base text-ink/65 sm:text-lg">
-            {t("subheadline")}
-          </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <Link href="/find-my-apartment" className="btn-primary">
-              {t("ctaPrimary")}
-            </Link>
-            <Link href="/apartments" className="btn-secondary">
-              {t("ctaSecondary")}
-            </Link>
-          </div>
+    <section className="relative flex min-h-[88vh] items-end overflow-hidden bg-ink sm:min-h-screen">
+      <Image
+        src={stockPhotos.heroBuilding}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/10" />
+
+      <div className="container-wide relative pb-16 pt-40 sm:pb-24 sm:pt-56">
+        <p className="eyebrow-on-dark">{t("eyebrow")}</p>
+        <h1 className="mt-4 max-w-2xl font-heading text-4xl font-medium leading-[1.1] text-cream sm:text-5xl lg:text-6xl">
+          {t("headline")}
+        </h1>
+        <p className="mt-5 max-w-md text-base leading-relaxed text-cream/75 sm:text-lg">
+          {t("subheadline")}
+        </p>
+        <div className="mt-8">
+          <Link href="/apartments" className="btn-on-dark">
+            {t("ctaPrimary")}
+          </Link>
         </div>
-
-        {/* Placeholder for premium hero photography — replace with real
-           property/lifestyle imagery once available. */}
-        <div className="hidden aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-forest/10 to-terracotta/10 lg:block" />
-      </div>
-
-      <div className="container-content pb-14 sm:pb-20 lg:pb-24 lg:-mt-6">
-        <SearchWidget />
       </div>
     </section>
   );

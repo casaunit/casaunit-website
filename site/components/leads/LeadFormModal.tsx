@@ -41,7 +41,7 @@ export default function LeadFormModal({
 
       {open && (
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-ink/50 p-0 sm:items-center sm:p-4">
-          <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-2xl bg-cream p-6 sm:rounded-2xl sm:p-8">
+          <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-2xl bg-cream p-6 sm:rounded-xl sm:p-8">
             <div className="mb-6 flex items-center justify-between">
               <h2 className="font-heading text-xl font-bold text-ink">{t("title")}</h2>
               <button onClick={() => setOpen(false)} aria-label="Close">

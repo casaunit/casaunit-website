@@ -33,17 +33,32 @@ async function fetchFromAirtable(): Promise<Unit[] | null> {
   if (!baseId || !apiKey) return null;
 
   try {
-    const res = await fetch(
-      `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(table)}?filterByFormula=OR(status='available',status='coming_soon')`,
-      {
+    // Airtable caps each response at 100 records and returns an `offset`
+    // token when more exist — at 30-50 units today a single page covers
+    // everything, but this loop keeps fetching until Airtable stops
+    // returning an offset so nothing silently disappears once inventory
+    // grows past 100 units.
+    const records: any[] = [];
+    let offset: string | undefined;
+
+    do {
+      const url = new URL(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(table)}`);
+      url.searchParams.set("filterByFormula", "OR(status='available',status='coming_soon')");
+      url.searchParams.set("pageSize", "100");
+      if (offset) url.searchParams.set("offset", offset);
+
+      const res = await fetch(url.toString(), {
         headers: { Authorization: `Bearer ${apiKey}` },
         next: { revalidate: 60 } // refresh at most once a minute
-      }
-    );
-    if (!res.ok) return null;
+      });
+      if (!res.ok) return records.length ? records.map(mapAirtableRecordToUnit) : null;
 
-    const data = await res.json();
-    return (data.records || []).map(mapAirtableRecordToUnit);
+      const data = await res.json();
+      records.push(...(data.records || []));
+      offset = data.offset;
+    } while (offset);
+
+    return records.map(mapAirtableRecordToUnit);
   } catch {
     // Network/config issue — fail quietly to the seed fallback rather
     // than breaking the page for visitors.
@@ -72,9 +87,18 @@ function mapAirtableRecordToUnit(record: any): Unit {
     parking: !!f.parking,
     petsAllowed: !!f.pets_allowed,
     utilitiesIncluded: f.utilities_included || [],
+    amenities: f.amenities || [],
     descriptionEn: f.description_en || "",
     descriptionFr: f.description_fr || "",
+    // Supports both Airtable attachment objects ({url, ...}) and plain
+    // URL strings, so switching photo hosting to an external CDN later
+    // (see README) is a data change only — never a code change.
     images: (f.images || []).map((img: any) => (typeof img === "string" ? img : img.url)),
+    floorPlanUrl: Array.isArray(f.floor_plan)
+      ? f.floor_plan[0]?.url
+      : typeof f.floor_plan === "string"
+        ? f.floor_plan
+        : undefined,
     status: f.status || "available"
   };
 }

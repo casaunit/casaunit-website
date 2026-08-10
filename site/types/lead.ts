@@ -1,4 +1,5 @@
 export interface LeadPayload {
+  leadType?: "tenant";
   firstName: string;
   lastName: string;
   phone: string;

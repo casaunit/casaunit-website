@@ -1,16 +1,23 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { cities } from "@/data/seed/cities";
 import { getUnitsByCity } from "@/lib/inventory/getUnits";
 import { Link } from "@/lib/navigation";
 import { Locale } from "@/routing";
+import { stockPhotos } from "@/lib/media/stockPhotos";
 import PropertyCard from "@/components/property/PropertyCard";
 import WhatsAppButton from "@/components/marketing/WhatsAppButton";
 
 export function generateStaticParams() {
   return cities.filter((c) => c.isActive).map((c) => ({ city: c.slug }));
 }
+
+const cityImages: Record<string, string> = {
+  ottawa: stockPhotos.buildingOttawa,
+  gatineau: stockPhotos.buildingGatineau
+};
 
 export async function generateMetadata({
   params: { locale, city }
@@ -21,8 +28,8 @@ export async function generateMetadata({
   if (!cityData) return {};
   const name = locale === "fr" ? cityData.nameFr : cityData.nameEn;
   return {
-    title: `${name} Apartments for Rent | Move to Canada`,
-    description: `Browse apartments in ${name}, ${cityData.province}. Find your home in Canada before you arrive.`
+    title: `${name} | CasaUnit`,
+    description: `Découvrez ${name}, ${cityData.province} — trouvez votre logement avant votre arrivée au Canada.`
   };
 }
 
@@ -42,24 +49,26 @@ export default async function CityPage({
 
   return (
     <div>
-      <section className="bg-cream-soft py-14 sm:py-20">
-        <div className="container-content">
-          <p className="text-sm font-semibold uppercase tracking-wide text-terracotta">
-            {cityData.province}
-          </p>
-          <h1 className="mt-2 text-4xl font-extrabold sm:text-5xl">{cityName}</h1>
-          <p className="mt-4 max-w-xl text-ink/65">{t(`descriptions.${city}`)}</p>
-          <Link href={`/${city}/apartments`} className="btn-primary mt-6">
+      <section className="relative flex min-h-[55vh] items-end overflow-hidden bg-ink">
+        <Image src={cityImages[city] || stockPhotos.buildingOttawa} alt="" fill sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/5" />
+        <div className="container-wide relative pb-14 pt-32 sm:pb-20">
+          <p className="eyebrow-on-dark">{cityData.province}</p>
+          <h1 className="mt-3 font-heading text-4xl font-medium text-cream sm:text-5xl">{cityName}</h1>
+          <p className="mt-4 max-w-xl text-cream/75">{t(`descriptions.${city}`)}</p>
+          <Link href={{ pathname: "/apartments", query: { city } }} className="btn-on-dark mt-7">
             {t("viewApartments", { city: cityName })}
           </Link>
         </div>
       </section>
 
       <section className="py-14 sm:py-20">
-        <div className="container-content">
+        <div className="container-wide">
           <div className="flex items-end justify-between">
-            <h2 className="text-2xl font-bold sm:text-3xl">{t("availableIn", { city: cityName })}</h2>
-            <Link href={`/${city}/apartments`} className="text-sm font-semibold text-terracotta">
+            <h2 className="font-heading text-2xl font-medium text-ink sm:text-3xl">
+              {t("availableIn", { city: cityName })}
+            </h2>
+            <Link href={{ pathname: "/apartments", query: { city } }} className="text-sm font-semibold text-ink/70 hover:text-ink">
               {t("seeAll")}
             </Link>
           </div>
@@ -77,7 +86,7 @@ export default async function CityPage({
       </section>
 
       <section className="pb-16">
-        <div className="container-content">
+        <div className="container-wide">
           <WhatsAppButton variant="banner" context={city} message={t("whatsappMessage", { city: cityName })} />
         </div>
       </section>

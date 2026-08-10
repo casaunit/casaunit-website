@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/navigation";
-import { cities } from "@/data/seed/cities";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -9,62 +8,55 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-cream/10 bg-ink text-cream">
-      <div className="container-content grid grid-cols-2 gap-10 py-14 sm:grid-cols-4">
-        <div className="col-span-2 sm:col-span-1">
-          <Image src="/logo-white.png" alt="CasaUnit" width={140} height={90} className="h-10 w-auto object-contain object-left" />
-          <p className="mt-3 max-w-[220px] text-sm text-cream/60">{t("tagline")}</p>
+      <div className="container-wide grid gap-10 py-16 sm:grid-cols-3 sm:py-20">
+        <div className="sm:col-span-1">
+          <Image
+            src="/logo-white.png"
+            alt="CasaUnit"
+            width={140}
+            height={90}
+            className="h-9 w-auto object-contain object-left"
+          />
+          <p className="mt-4 max-w-[260px] text-sm leading-relaxed text-cream/60">{t("tagline")}</p>
         </div>
 
         <div>
-          <p className="text-sm font-semibold text-cream">{t("cities")}</p>
-          <ul className="mt-3 space-y-2">
-            {cities.map((city) => (
-              <li key={city.id}>
-                <Link href={`/${city.slug}`} className="text-sm text-cream/60 hover:text-cream">
-                  {city.nameEn}
-                </Link>
-              </li>
-            ))}
+          <p className="eyebrow-on-dark">{t("navigation")}</p>
+          <ul className="mt-4 space-y-2.5">
+            <li>
+              <Link href="/" className="text-sm text-cream/70 hover:text-cream">
+                {nav("home")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/apartments" className="text-sm text-cream/70 hover:text-cream">
+                {nav("cta")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/guide" className="text-sm text-cream/70 hover:text-cream">
+                {nav("guide")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/landlords" className="text-sm text-cream/70 hover:text-cream">
+                {nav("landlords")}
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div>
-          <p className="text-sm font-semibold text-cream">{t("company")}</p>
-          <ul className="mt-3 space-y-2">
+          <p className="eyebrow-on-dark">{t("cities")}</p>
+          <ul className="mt-4 space-y-2.5">
             <li>
-              <Link href="/how-it-works" className="text-sm text-cream/60 hover:text-cream">
-                {nav("howItWorks")}
+              <Link href={{ pathname: "/[city]", params: { city: "ottawa" } }} className="text-sm text-cream/70 hover:text-cream">
+                Ottawa
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-sm text-cream/60 hover:text-cream">
-                {nav("about")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="text-sm text-cream/60 hover:text-cream">
-                {nav("contact")}
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-cream">{t("legal")}</p>
-          <ul className="mt-3 space-y-2">
-            <li>
-              <Link href="/privacy-policy" className="text-sm text-cream/60 hover:text-cream">
-                {t("privacy")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/terms-of-use" className="text-sm text-cream/60 hover:text-cream">
-                {t("terms")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/cookie-policy" className="text-sm text-cream/60 hover:text-cream">
-                {t("cookies")}
+              <Link href={{ pathname: "/[city]", params: { city: "gatineau" } }} className="text-sm text-cream/70 hover:text-cream">
+                Gatineau
               </Link>
             </li>
           </ul>
@@ -72,7 +64,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-cream/10 py-5">
-        <p className="container-content text-xs text-cream/40">
+        <p className="container-wide text-xs text-cream/40">
           © {new Date().getFullYear()} CasaUnit. {t("rights")}
         </p>
       </div>

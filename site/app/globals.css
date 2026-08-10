@@ -21,19 +21,37 @@
     @apply mx-auto w-full max-w-content px-5 sm:px-8;
   }
 
+  .container-wide {
+    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8;
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl bg-terracotta px-6 py-3.5 text-sm font-semibold text-cream transition-colors hover:bg-terracotta-dark;
+    @apply inline-flex items-center justify-center rounded-xl bg-terracotta px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-cream transition-colors hover:bg-terracotta-dark;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-xl border border-ink/15 bg-transparent px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/5;
+    @apply inline-flex items-center justify-center rounded-xl border border-ink/20 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-ink/5;
+  }
+
+  .btn-on-dark {
+    @apply inline-flex items-center justify-center rounded-xl bg-cream px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-cream/90;
   }
 
   .card {
-    @apply rounded-2xl border border-border bg-white shadow-card transition-shadow hover:shadow-cardHover;
+    @apply rounded-xl border border-border bg-white shadow-card transition-shadow hover:shadow-cardHover;
   }
 
   .input {
     @apply rounded-xl border border-border bg-white px-3.5 py-3 text-sm font-medium text-ink outline-none focus:border-ink/30;
+  }
+
+  /* Small uppercase tracked label used above headings — "Refined Contemporary
+     Living" style eyebrows throughout the Talisman-inspired sections. */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-forest;
+  }
+
+  .eyebrow-on-dark {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-cream/60;
   }
 }

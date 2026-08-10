@@ -24,15 +24,18 @@ export default function PropertyCard({ unit }: PropertyCardProps) {
   const description = locale === "fr" ? unit.descriptionFr : unit.descriptionEn;
 
   return (
-    <Link href={`/apartments/${unit.slug}`} className="card group flex flex-col overflow-hidden">
+    <Link
+      href={{ pathname: "/apartments/[unitSlug]", params: { unitSlug: unit.slug } }}
+      className="card group flex flex-col overflow-hidden"
+    >
       <div className="relative aspect-[4/3] bg-forest/10">
         {/* Real photo goes here once inventory is connected */}
         <div className="absolute inset-0 flex items-center justify-center text-xs font-medium uppercase tracking-wide text-ink/30">
           {unit.isPlaceholder ? t("placeholderNotice") : ""}
         </div>
         {unit.status === "coming_soon" && (
-          <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-xs font-semibold text-cream">
-            Coming Soon
+          <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cream">
+            {t("comingSoon")}
           </span>
         )}
       </div>

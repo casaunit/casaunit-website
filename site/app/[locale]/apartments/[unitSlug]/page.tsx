@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { BedDouble, Bath, Ruler, CalendarDays, Car, Sofa, PawPrint } from "lucide-react";
+import { BedDouble, Bath, Ruler, CalendarDays, Car, Sofa, PawPrint, Archive } from "lucide-react";
 import { getAllUnits, getUnitBySlug } from "@/lib/inventory/getUnits";
 import { Locale } from "@/routing";
 import UnitGallery from "@/components/property/UnitGallery";
@@ -21,7 +22,7 @@ export async function generateMetadata({
   const unit = await getUnitBySlug(unitSlug);
   if (!unit) return {};
   return {
-    title: `${unit.buildingName} — ${unit.city} | Move to Canada`,
+    title: `${unit.publicLabel} — ${unit.city} | CasaUnit`,
     description: unit.descriptionEn
   };
 }
@@ -38,21 +39,21 @@ export default async function UnitDetailPage({
 
   const t = await getTranslations("UnitDetail");
   const description = locale === "fr" ? unit.descriptionFr : unit.descriptionEn;
-  const unitLabel = `${unit.buildingName} — ${unit.city}`;
+  const unitLabel = `${unit.publicLabel} — ${unit.city}`;
 
   return (
     <div className="container-wide py-10 sm:py-14">
       <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
         <div>
-          <UnitGallery images={unit.images} alt={unit.buildingName} />
+          <UnitGallery images={unit.images} alt={unit.publicLabel} />
 
           <div className="mt-8">
             <p className="text-sm text-ink/50">
               {unit.neighbourhood ? `${unit.neighbourhood}, ` : ""}
               {unit.city}
             </p>
-            <h1 className="mt-1 font-heading text-3xl font-bold sm:text-4xl">{unit.buildingName}</h1>
-            {unit.unitNumber && <p className="mt-1 text-ink/50">{t("unit")} {unit.unitNumber}</p>}
+            <h1 className="mt-1 font-heading text-3xl font-bold sm:text-4xl">{unit.publicLabel}</h1>
+            {unit.floor && <p className="mt-1 text-ink/50">{t("floorLabel")} {unit.floor}</p>}
 
             <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <Stat icon={BedDouble} label={t("bedrooms")} value={unit.bedrooms} />
@@ -68,8 +69,22 @@ export default async function UnitDetailPage({
             <div className="mt-6 flex flex-wrap gap-3">
               <Badge icon={Sofa}>{unit.furnished ? t("furnished") : t("unfurnished")}</Badge>
               <Badge icon={Car}>{unit.parking ? t("parkingAvailable") : t("noParking")}</Badge>
+              <Badge icon={Archive}>{unit.locker ? t("lockerAvailable") : t("noLocker")}</Badge>
               <Badge icon={PawPrint}>{unit.petsAllowed ? t("petsAllowed") : t("noPets")}</Badge>
             </div>
+
+            {unit.commonAreaImages.length > 0 && (
+              <>
+                <h2 className="mt-10 font-heading text-xl font-bold">{t("commonAreas")}</h2>
+                <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {unit.commonAreaImages.map((src) => (
+                    <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-forest/10">
+                      <Image src={src} alt="" fill sizes="33vw" className="object-cover" />
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
 
             <h2 className="mt-10 font-heading text-xl font-bold">{t("description")}</h2>
             <p className="mt-2 text-ink/65">{description}</p>

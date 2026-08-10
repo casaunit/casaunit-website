@@ -134,7 +134,12 @@ async function fetchFromAirtable(): Promise<InternalUnit[] | null> {
   const apiKey = process.env.AIRTABLE_API_KEY;
   const table = process.env.AIRTABLE_UNITS_TABLE || "Units";
 
-  if (!baseId || !apiKey) return null;
+  if (!baseId || !apiKey) {
+    console.error(
+      `[airtable] Missing config — AIRTABLE_BASE_ID: ${baseId ? "set" : "MISSING"}, AIRTABLE_API_KEY: ${apiKey ? "set" : "MISSING"}`
+    );
+    return null;
+  }
 
   try {
     // Airtable caps each response at 100 records and returns an `offset`
@@ -156,7 +161,11 @@ async function fetchFromAirtable(): Promise<InternalUnit[] | null> {
         headers: { Authorization: `Bearer ${apiKey}` },
         next: { revalidate: 60 } // refresh at most once a minute
       });
-      if (!res.ok) return records.length ? records.map(mapAirtableRecordToInternalUnit) : null;
+      if (!res.ok) {
+        const body = await res.text().catch(() => "");
+        console.error(`[airtable] Request failed: ${res.status} ${res.statusText} — ${body.slice(0, 500)}`);
+        return records.length ? records.map(mapAirtableRecordToInternalUnit) : null;
+      }
 
       const data = await res.json();
       records.push(...(data.records || []));
@@ -164,9 +173,10 @@ async function fetchFromAirtable(): Promise<InternalUnit[] | null> {
     } while (offset);
 
     return records.map(mapAirtableRecordToInternalUnit);
-  } catch {
+  } catch (err) {
     // Network/config issue — fail quietly to the seed fallback rather
     // than breaking the page for visitors.
+    console.error(`[airtable] Fetch threw: ${err instanceof Error ? err.message : String(err)}`);
     return null;
   }
 }

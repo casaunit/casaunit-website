@@ -1,12 +1,13 @@
 import { getRequestConfig } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { locales, Locale } from "./i18n-config";
 
-// Only "en" and "fr" ship in v1. Adding "ar" later is a matter of dropping
-// in messages/ar.json and adding "ar" to this array + middleware.ts —
-// no component code changes required.
-export const locales = ["en", "fr"] as const;
-export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "en";
+// Re-exported so existing `import { locales, Locale, defaultLocale } from
+// "@/i18n"` in pages/layouts keep working unchanged — only middleware.ts
+// and lib/navigation.ts import directly from i18n-config.ts (see that
+// file for why the split exists).
+export { locales, defaultLocale } from "./i18n-config";
+export type { Locale } from "./i18n-config";
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as Locale)) notFound();

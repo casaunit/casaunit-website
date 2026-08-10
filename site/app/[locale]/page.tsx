@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Hero from "@/components/home/Hero";
 import HomeSearch from "@/components/home/HomeSearch";
+import StartingPrices from "@/components/home/StartingPrices";
 import FeaturedUnits from "@/components/home/FeaturedUnits";
 import SplitSection from "@/components/home/SplitSection";
 import CityLifestyle from "@/components/home/CityLifestyle";
@@ -23,6 +24,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
     <>
       <Hero />
       <HomeSearch />
+      <StartingPrices />
       <FeaturedUnits />
 
       <SplitSection

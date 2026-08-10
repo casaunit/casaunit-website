@@ -15,23 +15,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-cream/95 backdrop-blur">
       <div className="container-wide flex h-16 items-center justify-between py-3 sm:h-20">
-        <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink p-1.5">
-            <Image
-              src="/logo-icon-white.png"
-              alt="CasaUnit"
-              width={28}
-              height={28}
-              className="h-full w-full object-contain"
-            />
-          </span>
-          <span className="font-heading text-lg font-semibold text-ink sm:text-xl">CasaUnit</span>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <Image
+            src="/logo-horizontal-navy.png"
+            alt="CasaUnit — Gestion immobilière & location"
+            width={1431}
+            height={347}
+            priority
+            className="h-9 w-auto object-contain sm:h-10"
+          />
         </Link>
 
         <nav className="hidden items-center gap-9 lg:flex">
-          <Link href="/" className="text-sm font-medium text-ink/70 transition-colors hover:text-ink">
-            {t("home")}
-          </Link>
           <Link href="/guide" className="text-sm font-medium text-ink/70 transition-colors hover:text-ink">
             {t("guide")}
           </Link>
@@ -58,13 +53,6 @@ export default function Header() {
       {open && (
         <div className="border-t border-border bg-cream lg:hidden">
           <nav className="container-wide flex flex-col gap-1 py-4">
-            <Link
-              href="/"
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-2 py-2.5 text-sm font-medium text-ink/80 hover:bg-ink/5"
-            >
-              {t("home")}
-            </Link>
             <Link
               href="/apartments"
               onClick={() => setOpen(false)}

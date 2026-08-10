@@ -16,13 +16,20 @@ function unsplash(id: string) {
 }
 
 export const stockPhotos = {
-  heroBuilding: unsplash("1769921595480-32e28eb1c155"), // modern building facade, blue sky
-  livingRoom: unsplash("1648425731270-ebd373a19149"), // bright modern living room
-  airportArrival: unsplash("1504150558240-0b4fd8946624"), // traveler with luggage
-  movingIn: unsplash("1758523670991-ee93bc48d81d"), // couple moving boxes into new home
+  // Zak-supplied photography (2026-08 iteration) — assigned to specific
+  // sections per his brief. Do not swap these for stock/generated images
+  // without asking him first; each one has a designated purpose below.
+  heroImage: "/images/image6-hero.jpg", // homepage hero — waterfront residential district, negative space left
+  airportArrival: "/images/image1-airport-arrival.jpg", // family at airport, "Destination Canada" signage — homepage "Arrival" teaser + Guide arrival section
+  cityLifestyle: "/images/image2-city-lifestyle.jpg", // Ottawa/Gatineau waterfront skyline at night
+  keysMovingIn: "/images/image3-keys.jpg", // family receiving keys to their new home
+  interiorShowcase: "/images/image4-interior.jpg", // premium apartment interior — real-estate storytelling section
+  landlordBuilding: "/images/image5-landlord-building.jpg", // premium waterfront building at dusk — property owner sections
+
+  // Verified free-license Unsplash photography (unchanged, not part of
+  // the 6 supplied images) — still used by city pages + guide sections.
   buildingOttawa: unsplash("1479839672679-a46483c0e7c8"), // white modern apartment building
   buildingGatineau: unsplash("1755735340764-3b077cab0c5c"), // apartment building, trees + sky
-  landlordBuilding: unsplash("1779029314445-b20031dfd4e3"), // tall modern building, many windows
   guideMoney: unsplash("1772588627327-1eeddcf73c11"), // documents + calculator
   guidePhone: unsplash("1687720106084-d6e235ad226c"), // SIM/card close-up
   guideTransit: unsplash("1712212308848-b17bd6f70be7"), // public transit bus

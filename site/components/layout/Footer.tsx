@@ -11,11 +11,11 @@ export default function Footer() {
       <div className="container-wide grid gap-10 py-16 sm:grid-cols-3 sm:py-20">
         <div className="sm:col-span-1">
           <Image
-            src="/logo-white.png"
-            alt="CasaUnit"
-            width={140}
-            height={90}
-            className="h-9 w-auto object-contain object-left"
+            src="/logo-horizontal-white.png"
+            alt="CasaUnit — Gestion immobilière & location"
+            width={1431}
+            height={347}
+            className="h-10 w-auto object-contain object-left"
           />
           <p className="mt-4 max-w-[260px] text-sm leading-relaxed text-cream/60">{t("tagline")}</p>
         </div>

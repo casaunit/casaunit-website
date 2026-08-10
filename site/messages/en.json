@@ -7,49 +7,51 @@
   },
   "Hero": {
     "eyebrow": "Ottawa · Gatineau",
-    "headline": "Your new life in Canada starts here.",
-    "subheadline": "Find your home in Ottawa and Gatineau, before or after you arrive.",
-    "ctaPrimary": "Find a Home"
+    "headline": "Your new home in Canada starts here.",
+    "subheadline": "Discover available homes in Ottawa and Gatineau and prepare your arrival with ease.",
+    "ctaPrimary": "Find a Home",
+    "ctaSecondary": "Settling-in Guide"
   },
-  "Story": {
-    "step1": {
-      "title": "Find your home",
-      "description": "Browse available apartments based on your city, budget, and needs."
-    },
-    "step2": {
-      "title": "Prepare your arrival",
-      "description": "Use our settling-in guide to understand the first things you need to do in Canada."
-    },
-    "step3": {
-      "title": "Settle in with ease",
-      "description": "Housing, transport, banking, phone, internet — the essentials for your first weeks."
-    }
+  "HomeSearch": {
+    "title": "Find your next home.",
+    "subtitle": "Discover available units in Ottawa and Gatineau based on your needs.",
+    "city": "City",
+    "priceMin": "Min. Budget",
+    "priceMax": "Max. Budget",
+    "bedrooms": "Bedrooms",
+    "moveInDate": "Move-in Date",
+    "any": "Any",
+    "submit": "Search for a Unit"
   },
-  "Cities": {
-    "eyebrow": "Where we are",
-    "title": "Choose your city",
-    "ottawa": {
-      "province": "Ontario",
-      "name": "Ottawa",
-      "cta": "View Ottawa Rentals"
-    },
-    "gatineau": {
-      "province": "Quebec",
-      "name": "Gatineau",
-      "cta": "View Gatineau Rentals"
-    }
+  "FeaturedUnits": {
+    "title": "Available Units",
+    "viewAll": "View all units"
   },
-  "GuideTeaser": {
+  "RealEstate": {
+    "eyebrow": "The CasaUnit marketplace",
+    "title": "Find a home that feels like you.",
+    "description": "Quality units, selected for comfort and location across Ottawa and Gatineau.",
+    "cta": "Explore units"
+  },
+  "Arrival": {
     "eyebrow": "Settling-in Guide",
-    "title": "A simple guide for your first weeks",
-    "description": "Arrival, housing, money, phone, getting around — the essentials explained simply, drawn from reliable Canadian sources.",
-    "cta": "Read the guide"
+    "title": "Prepare your arrival in Canada.",
+    "description": "Transport, banking, phone plans and first steps — the essentials to make your move easier.",
+    "cta": "See the guide"
   },
-  "LandlordBanner": {
-    "eyebrow": "Landlords & property managers",
-    "title": "Have units to rent?",
-    "description": "CasaUnit puts your listings in front of serious renters preparing to move to Ottawa and Gatineau.",
-    "cta": "For Landlords"
+  "CityLifestyle": {
+    "title": "Discover your new city."
+  },
+  "Keys": {
+    "eyebrow": "Settling in",
+    "title": "Settle in with ease.",
+    "description": "From your arrival to your new home, CasaUnit is with you every step of the way."
+  },
+  "LandlordTeaser": {
+    "eyebrow": "Are you a landlord?",
+    "title": "Let us showcase your unit.",
+    "description": "CasaUnit helps you present your property to renters looking for their next home.",
+    "cta": "List my property"
   },
   "Featured": {
     "viewUnit": "View Unit",

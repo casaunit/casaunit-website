@@ -7,49 +7,51 @@
   },
   "Hero": {
     "eyebrow": "Ottawa · Gatineau",
-    "headline": "Votre nouvelle vie au Canada commence ici.",
-    "subheadline": "Trouvez votre logement à Ottawa et Gatineau, avant ou après votre arrivée.",
-    "ctaPrimary": "Trouver une unité"
+    "headline": "Votre nouveau chez-vous au Canada commence ici.",
+    "subheadline": "Découvrez des logements disponibles à Ottawa et Gatineau et préparez votre arrivée simplement.",
+    "ctaPrimary": "Trouver une unité",
+    "ctaSecondary": "Guide d'installation"
   },
-  "Story": {
-    "step1": {
-      "title": "Trouvez votre logement",
-      "description": "Parcourez les logements disponibles selon votre ville, votre budget et vos besoins."
-    },
-    "step2": {
-      "title": "Préparez votre arrivée",
-      "description": "Utilisez notre guide d'installation pour comprendre les premières démarches à faire au Canada."
-    },
-    "step3": {
-      "title": "Installez-vous simplement",
-      "description": "Logement, transport, banque, téléphone, internet — l'essentiel pour vos premières semaines."
-    }
+  "HomeSearch": {
+    "title": "Trouvez votre prochain chez-vous.",
+    "subtitle": "Découvrez les unités disponibles à Ottawa et Gatineau selon vos besoins.",
+    "city": "Ville",
+    "priceMin": "Budget min.",
+    "priceMax": "Budget max.",
+    "bedrooms": "Chambres",
+    "moveInDate": "Date d'emménagement",
+    "any": "Toutes",
+    "submit": "Rechercher une unité"
   },
-  "Cities": {
-    "eyebrow": "Où nous sommes",
-    "title": "Choisissez votre ville",
-    "ottawa": {
-      "province": "Ontario",
-      "name": "Ottawa",
-      "cta": "Voir les logements à Ottawa"
-    },
-    "gatineau": {
-      "province": "Québec",
-      "name": "Gatineau",
-      "cta": "Voir les logements à Gatineau"
-    }
+  "FeaturedUnits": {
+    "title": "Unités disponibles",
+    "viewAll": "Voir toutes les unités"
   },
-  "GuideTeaser": {
+  "RealEstate": {
+    "eyebrow": "Le marché locatif CasaUnit",
+    "title": "Trouvez un logement qui vous ressemble.",
+    "description": "Des logements de qualité, sélectionnés pour leur confort et leur emplacement à Ottawa et Gatineau.",
+    "cta": "Explorer les unités"
+  },
+  "Arrival": {
     "eyebrow": "Guide d'installation",
-    "title": "Un guide simple pour vos premières semaines",
-    "description": "Arrivée, logement, argent, téléphone, déplacements — l'essentiel expliqué simplement, à partir de sources canadiennes fiables.",
-    "cta": "Consulter le guide"
+    "title": "Préparez votre arrivée au Canada.",
+    "description": "Transport, banque, téléphone et premières démarches : retrouvez l'essentiel pour faciliter votre installation.",
+    "cta": "Voir le guide"
   },
-  "LandlordBanner": {
-    "eyebrow": "Propriétaires et gestionnaires",
-    "title": "Vous avez des unités à louer ?",
-    "description": "CasaUnit met vos logements devant des locataires sérieux, prêts à s'installer à Ottawa et Gatineau.",
-    "cta": "Vous êtes propriétaire ?"
+  "CityLifestyle": {
+    "title": "Découvrez votre nouvelle ville."
+  },
+  "Keys": {
+    "eyebrow": "Votre installation",
+    "title": "Installez-vous simplement.",
+    "description": "De votre arrivée jusqu'à votre nouveau chez-vous, CasaUnit vous accompagne pour rendre votre installation plus simple."
+  },
+  "LandlordTeaser": {
+    "eyebrow": "Vous êtes propriétaire ?",
+    "title": "Confiez-nous votre unité.",
+    "description": "CasaUnit vous aide à présenter votre propriété à des locataires à la recherche de leur prochain chez-soi.",
+    "cta": "Proposer mon logement"
   },
   "Featured": {
     "viewUnit": "Voir le logement",

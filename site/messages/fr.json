@@ -140,6 +140,7 @@
     "commonAreas": "Espaces communs",
     "description": "Description",
     "amenities": "Commodités",
+    "floorPlan": "Plan de l'unité",
     "utilities": "Services inclus",
     "neighbourhoodArea": "Quartier",
     "mapPlaceholder": "Intégration de carte à venir.",

@@ -140,6 +140,7 @@
     "commonAreas": "Common Areas",
     "description": "Description",
     "amenities": "Amenities",
+    "floorPlan": "Floor Plan",
     "utilities": "Utilities Included",
     "neighbourhoodArea": "Neighbourhood",
     "mapPlaceholder": "Map integration coming soon.",

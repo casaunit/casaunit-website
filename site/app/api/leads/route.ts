@@ -41,6 +41,7 @@ export async function POST(req: NextRequest) {
 
   // 2. Then dispatch to the configured CRM (Make.com → Airtable by default).
   const result = await dispatchLead(payload);
+  console.log("[crm:dispatch]", JSON.stringify(result));
 
   // The visitor still gets a success response even if CRM dispatch failed —
   // the lead is safely stored and can be retried/synced manually.

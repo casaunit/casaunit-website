@@ -40,6 +40,9 @@ export default function Header() {
 
         <div className="hidden items-center gap-6 lg:flex">
           <LanguageSwitcher />
+      <Link href="/find-my-apartment" className="text-sm font-medium text-ink/70 transition-colors hover:text-ink">
+        {t("getMatched")}
+      </Link>
           <Link href="/apartments" className="btn-primary">
             {t("cta")}
           </Link>
@@ -74,6 +77,13 @@ export default function Header() {
             >
               {t("landlords")}
             </Link>
+        <Link
+          href="/find-my-apartment"
+          onClick={() => setOpen(false)}
+          className="rounded-lg px-2 py-2.5 text-sm font-medium text-ink/80 hover:bg-ink/5"
+        >
+          {t("getMatched")}
+        </Link>
             <div className="mt-2 flex items-center justify-between px-2">
               <LanguageSwitcher />
             </div>
